@@ -1,3 +1,5 @@
+from customer_operations.add_customer import add_customer
+
 def customer_queries():
     print("""
 What would you like to do?
@@ -13,8 +15,8 @@ def customer_main():
     choice = input("> ").lower()
     while True:
         if choice == "1":
-            print("Add Feature to be implemented...")
-            customer_main()
+            add_customer()
+            # customer_main()
         elif choice == "2":
             print("Delete Feature to be implemented...")
             customer_main()

@@ -1,5 +1,5 @@
 import json
-filename = '../storage/customers.json'
+filename = 'storage/customers.json'
 
 
 def create_customer_id():
@@ -53,9 +53,12 @@ Enter the gender:
     with open(filename, "w") as f:
         json.dump(temp, f, indent=4)
     print("Customer details added")
+    from customer_operations.customers import customer_main
+    customer_main()
 
 
-add_customer()
+
+
 
 
 
