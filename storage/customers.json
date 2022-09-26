@@ -35,6 +35,12 @@
             "gender": "Male",
             "Purchase History": {},
             "Total Spent": 0
+        },
+        "c7": {
+            "name": "Hannah",
+            "gender": "female",
+            "Purchase History": {},
+            "Total Spent": 0
         }
     }
 ]

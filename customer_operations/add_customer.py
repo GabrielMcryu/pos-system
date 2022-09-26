@@ -53,13 +53,6 @@ Enter the gender:
     with open(filename, "w") as f:
         json.dump(temp, f, indent=4)
     print("Customer details added")
-    from customer_operations.customers import customer_main
-    customer_main()
-
-
-
-
-
 
 
 
