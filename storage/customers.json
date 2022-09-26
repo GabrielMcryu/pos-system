@@ -1,0 +1,22 @@
+[
+    {
+        "c1": {
+            "name": "Gabriel",
+            "gender": "Male",
+            "Purchase History": {},
+            "Total Spent": 0
+        },
+        "c2": {
+            "name": "Jane",
+            "gender": "female",
+            "Purchase History": {},
+            "Total Spent": 0
+        },
+        "c3": {
+            "name": "Rob",
+            "gender": "Male",
+            "Purchase History": {},
+            "Total Spent": 0
+        }
+    }
+]

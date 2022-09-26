@@ -27,5 +27,3 @@ def customer_main():
         else:
             print("You have entered a wrong choice. Please input choices between (1-4)")
             customer_main()
-
-

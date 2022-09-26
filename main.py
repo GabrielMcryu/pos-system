@@ -1,6 +1,6 @@
-from Customer_details.customers import customer_main
-from Product_details.products import product_main
-from Search_details.search import search_main
+from customer_operations.customers import customer_main
+from product_operations.products import product_main
+from search_operations.search import search_main
 
 
 def general_queries():
@@ -31,4 +31,5 @@ def main():
             print("You entered a wrong choice. Please input choices between (1-3)")
 
 
-main()
+if __name__ == "__main__":
+    main()
