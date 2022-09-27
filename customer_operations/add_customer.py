@@ -25,10 +25,10 @@ def add_customer():
     item_data = {}
     with open(filename, 'r') as f:
         temp = json.load(f)
-    item_data["name"] = input("Enter name: ")
+    item_data["name"] = input("Enter Customer name: ")
     while True:
         gender_choice = input("""
-Enter the gender:
+Enter Customer gender:
 1) Male
 2) Female
 : 
