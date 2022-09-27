@@ -1,14 +1,9 @@
 [
     {
         "p1": {
-            "name": "Nescaffe Coffee Sachette",
-            "quantity": 5,
-            "price": 10
-        },
-        "p2": {
-            "name": "garlic",
-            "quantity": 30,
-            "price": 20
+            "name": "Cocoa",
+            "quantity": 40,
+            "price": 150
         }
     }
 ]
