@@ -5,42 +5,6 @@
             "gender": "Male",
             "Purchase History": {},
             "Total Spent": 0
-        },
-        "c2": {
-            "name": "Jane",
-            "gender": "female",
-            "Purchase History": {},
-            "Total Spent": 0
-        },
-        "c3": {
-            "name": "Rob",
-            "gender": "Male",
-            "Purchase History": {},
-            "Total Spent": 0
-        },
-        "c4": {
-            "name": "John",
-            "gender": "Male",
-            "Purchase History": {},
-            "Total Spent": 0
-        },
-        "c5": {
-            "name": "Leah",
-            "gender": "female",
-            "Purchase History": {},
-            "Total Spent": 0
-        },
-        "c6": {
-            "name": "Rowan",
-            "gender": "Male",
-            "Purchase History": {},
-            "Total Spent": 0
-        },
-        "c7": {
-            "name": "Hannah",
-            "gender": "female",
-            "Purchase History": {},
-            "Total Spent": 0
         }
     }
 ]

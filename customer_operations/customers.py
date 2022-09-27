@@ -1,4 +1,6 @@
 from customer_operations.add_customer import add_customer
+from customer_operations.delete_customer import delete_customer
+
 
 def customer_queries():
     print("""
@@ -17,7 +19,7 @@ def customer_main():
         if choice == "1":
             add_customer()
         elif choice == "2":
-            print("Delete Feature to be implemented...")
+            delete_customer()
         elif choice == "3":
             print("Update feature to be implemented...")
         elif choice == "4":
