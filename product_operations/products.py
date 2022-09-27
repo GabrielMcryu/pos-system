@@ -6,7 +6,7 @@ def product_queries():
 What would you like to do?
 1) Add Product
 2) Delete Product
-3) Update Produc2t
+3) Update Product
 4) Go back
     """)
 

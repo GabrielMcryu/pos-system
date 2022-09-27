@@ -4,6 +4,11 @@
             "name": "Cocoa",
             "quantity": 40,
             "price": 150
+        },
+        "p2": {
+            "name": "Mint Choc",
+            "quantity": 23,
+            "price": 30
         }
     }
 ]

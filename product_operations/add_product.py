@@ -31,6 +31,7 @@ def add_product():
             quantity = int(input("Enter Quantity: "))
         except ValueError:
             print("Please enter number values")
+            continue
         item_data["quantity"] = quantity
         break
     while True:
@@ -38,6 +39,7 @@ def add_product():
             price = int(input("Enter Price: "))
         except ValueError:
             print("Please enter number values")
+            continue
         item_data["price"] = price
         break
     product_data[new_id] = item_data
