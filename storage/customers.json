@@ -5,6 +5,18 @@
             "gender": "Male",
             "Purchase History": {},
             "Total Spent": 0
+        },
+        "c2": {
+            "name": "Susan",
+            "gender": "female",
+            "Purchase History": {},
+            "Total Spent": 0
+        },
+        "c3": {
+            "name": "Kevin",
+            "gender": "male",
+            "Purchase History": {},
+            "Total Spent": 0
         }
     }
 ]
