@@ -1,4 +1,5 @@
 from search_operations.search_customers import *
+from search_operations.search_products import *
 
 
 def search_customer():
@@ -9,13 +10,20 @@ Select Customer Search Option
     """)
 
 
+def search_product():
+    print("""
+Select Product Search Option    
+1) List one Product
+2) List all Products
+    """)
+
+
 def search_queries():
     print("""
 What would you like to do?
 1) List Customers
-2) List all Products
-3) List Customer information
-4) Go back
+2) List Products
+3) Go Back
     """)
 
 
@@ -37,12 +45,21 @@ def search_main():
                     print("You have entered a wrong choice. Please input choices between (1-2)")
             break
         elif choice == "2":
-            print("Search Feature to be implemented...")
+            search_product()
+            product_choice = input("> ").lower()
+            while True:
+                if product_choice == "1":
+                    search_one_product()
+                    break
+                elif product_choice == "2":
+                    search_all_products()
+                    break
+                else:
+                    print("You have entered a wrong choice. Please input choices between (1-2)")
+            break
         elif choice == "3":
-            print("Search feature to be implemented...")
-        elif choice == "4":
             from main import main
             main()
         else:
-            print("You have entered a wrong choice. Please input choices between (1-4)")
+            print("You have entered a wrong choice. Please input choices between (1-3)")
         search_main()

@@ -1,3 +1,4 @@
+from search_operations.search_products import view_product_names
 import json
 filename = "storage/products.json"
 
@@ -20,6 +21,7 @@ def create_product_id():
 
 
 def add_product():
+    view_product_names()
     new_id = create_product_id()
     product_data = {}
     item_data = {}

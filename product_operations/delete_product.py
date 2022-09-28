@@ -1,8 +1,10 @@
+from search_operations.search_products import view_product_names
 import json
 filename = 'storage/products.json'
 
 
 def delete_product():
+    view_product_names()
     with open(filename, "r") as f:
         temp = json.load(f)
     if not temp:
