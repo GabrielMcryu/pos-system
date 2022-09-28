@@ -2,18 +2,21 @@
     {
         "c1": {
             "name": "Gabriel",
+            "phone number": 7483928374,
             "gender": "Male",
             "Purchase History": {},
             "Total Spent": 0
         },
         "c2": {
             "name": "Jane",
+            "phone number": 748376473,
             "gender": "female",
             "Purchase History": {},
             "Total Spent": 0
         },
         "c3": {
-            "name": "Kevin",
+            "name": "Robert",
+            "phone number": 738473647,
             "gender": "male",
             "Purchase History": {},
             "Total Spent": 0

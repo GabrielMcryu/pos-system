@@ -13,6 +13,14 @@ def update_customer():
             name = input("Update Customer name: ")
             open_list[update_option]["name"] = name
             while True:
+                try:
+                    phone_number = int(input("Enter Phone number: "))
+                except ValueError:
+                    print("Please enter number values")
+                    continue
+                break
+            open_list[update_option]["phone number"] = phone_number
+            while True:
                 gender_choice = input("""
 Enter the gender:
 1) Male

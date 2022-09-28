@@ -27,6 +27,14 @@ def add_customer():
         temp = json.load(f)
     item_data["name"] = input("Enter Customer name: ")
     while True:
+        try:
+            phone_number = int(input("Enter Phone number: "))
+        except ValueError:
+            print("Please enter number values")
+            continue
+        break
+    item_data["phone number"] = phone_number
+    while True:
         gender_choice = input("""
 Enter Customer gender:
 1) Male
