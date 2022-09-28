@@ -25,9 +25,9 @@ def update_product():
                     print("Please enter number values")
                     continue
                 break
-            open_list["name"] = name
-            open_list["quantity"] = quantity
-            open_list["price"] = price
+            open_list[update_option]["name"] = name
+            open_list[update_option]["quantity"] = quantity
+            open_list[update_option]["price"] = price
             print("Product Data updated")
             break
         else:

@@ -6,12 +6,9 @@
             "price": 150
         },
         "p2": {
-            "name": "Mint Choc",
-            "quantity": 23,
-            "price": 30
-        },
-        "name": "fudge",
-        "quantity": 30,
-        "price": 25
+            "name": "fudge",
+            "quantity": 50,
+            "price": 25
+        }
     }
 ]
