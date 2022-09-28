@@ -1,3 +1,4 @@
+from search_operations.search_customers import view_customer_names
 import json
 filename = 'storage/customers.json'
 
@@ -20,12 +21,13 @@ def create_customer_id():
 
 
 def add_customer():
+    view_customer_names()
     new_id = create_customer_id()
     customer_data = {}
     item_data = {}
     with open(filename, 'r') as f:
         temp = json.load(f)
-    item_data["name"] = input("Enter Customer name: ")
+    item_data["name"] = input("Enter Customer Name: ")
     while True:
         try:
             phone_number = int(input("Enter Phone number: "))
@@ -42,7 +44,7 @@ Enter Customer gender:
 : 
         """)
         if gender_choice == '1':
-            item_data["gender"] = "Male"
+            item_data["gender"] = "male"
             break
         elif gender_choice == '2':
             item_data["gender"] = "female"

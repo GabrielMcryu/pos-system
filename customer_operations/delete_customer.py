@@ -1,8 +1,10 @@
+from search_operations.search_customers import view_customer_names
 import json
 filename = 'storage/customers.json'
 
 
 def delete_customer():
+    view_customer_names()
     with open(filename, "r") as f:
         temp = json.load(f)
     if not temp:
