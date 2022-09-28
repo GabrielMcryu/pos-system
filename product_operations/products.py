@@ -1,5 +1,6 @@
 from product_operations.add_product import add_product
 from product_operations.delete_product import delete_product
+from product_operations.update_product import update_product
 
 def product_queries():
     print("""
@@ -20,7 +21,7 @@ def product_main():
         elif choice == "2":
             delete_product()
         elif choice == "3":
-            print("Update feature to be implemented...")
+            update_product()
         elif choice == "4":
             from main import main
             main()

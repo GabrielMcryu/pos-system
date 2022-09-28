@@ -9,6 +9,9 @@
             "name": "Mint Choc",
             "quantity": 23,
             "price": 30
-        }
+        },
+        "name": "fudge",
+        "quantity": 30,
+        "price": 25
     }
 ]
