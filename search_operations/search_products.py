@@ -23,7 +23,9 @@ def view_product_names():
     [open_list] = temp
     for product_id in open_list:
         name = open_list[product_id]["name"]
-        print(f"Product ID: {product_id}, Product Name: {name}")
+        quantity = open_list[product_id]["quantity"]
+        price = open_list[product_id]["price"]
+        print(f"ID: {product_id}, Name: {name}, Quantity: {quantity}, Price: {price} Kshs")
 
 
 def search_one_product():

@@ -1,6 +1,7 @@
 from customer_operations.customers import customer_main
 from product_operations.products import product_main
 from search_operations.search import search_main
+from purchase_operations.purchases import purchase_main
 
 
 def general_queries():
@@ -10,6 +11,7 @@ Enter the options listed to look at a specific query:
 1) Customer Details
 2) Product Details
 3) Search Details
+4) Start Shopping
 Q) Quit
     """)
 
@@ -24,6 +26,8 @@ def main():
             product_main()
         elif choice == "3":
             search_main()
+        elif choice == "4":
+            purchase_main()
         elif choice == "q":
             print("Program exited")
             quit()
