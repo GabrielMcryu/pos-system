@@ -48,6 +48,7 @@ def create_shopping_id():
 
 def check_product_quantity(p_id, p_data):
     while True:
+        view_product_names()
         try:
             product_quantity = int(input("""
 Enter Quantity:
@@ -56,6 +57,8 @@ Enter '0' to cancel
         except ValueError:
             print("Please enter number values")
             continue
+        if product_quantity == p_data[p_id]["quantity"]:
+            return product_quantity
         if product_quantity > p_data[p_id]["quantity"]:
             print("Value inputted is greater than what is in stock. Add a lower quantity value")
         else:
@@ -64,6 +67,7 @@ Enter '0' to cancel
 
 def get_item_data(product_data):
     items = {}
+    id_list = []
     while True:
         view_product_names()
         product_id = input("""
@@ -72,19 +76,24 @@ Press 'F' to Finish
 Press 'Q' to quit shopping        
 > """).lower()
         if product_id in product_data:
-            if product_data[product_id]["quantity"] < 1:
-                print("Product out of stock. Please input a different Product")
+            if product_id in id_list:
+                print("Product already exists in the cart. Please choose a different Product ID")
             else:
-                quantity = check_product_quantity(product_id, product_data)
-                if quantity == 0:
-                    continue
+                if product_data[product_id]["quantity"] < 1:
+                    print("Product out of stock. Please input a different Product")
                 else:
-                    item_id = create_item_id(items)
-                    items[item_id] = {}
-                    items[item_id]["product id"] = product_id
-                    items[item_id]["product name"] = product_data[product_id]["name"]
-                    items[item_id]["product quantity"] = quantity
-                    items[item_id]["product cost"] = product_data[product_id]["price"] * quantity
+                    quantity = check_product_quantity(product_id, product_data)
+                    if quantity == 0:
+                        continue
+                    else:
+                        item_id = create_item_id(items)
+                        items[item_id] = {}
+                        items[item_id]["product id"] = product_id
+                        items[item_id]["product name"] = product_data[product_id]["name"]
+                        items[item_id]["product quantity"] = quantity
+                        items[item_id]["product cost"] = product_data[product_id]["price"] * quantity
+                        id_list.append(product_id)
+
         elif product_id == "q":
             return 'q'
         elif product_id == 'f':
@@ -151,11 +160,17 @@ def purchase_main():
             purchase_list["customer id"] = customer_id
             purchase_list["customer name"] = open_customer[customer_id]["name"]
             purchase_list["shopping list"] = item_data
-            purchase_list["total amount"] = total
 
             confirmation = confirm_payment(total)
             if confirmation == "y":
                 print("Payment confirmed. Thank you for shopping with us!")
+                print("Receipt:")
+                for item in item_data:
+                    p_name = item_data[item]["product name"]
+                    p_quantity = item_data[item]["product quantity"]
+                    p_cost = item_data[item]["product cost"]
+                    print(f"Product: {p_name}   Quantity: {p_quantity}   Cost: {p_cost} ")
+                print(f"Total Cost: {total} Kshs")
 
                 for i in item_data.keys():
                     p_id = item_data[i]["product id"]

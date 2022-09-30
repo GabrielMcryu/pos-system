@@ -2,28 +2,28 @@
     {
         "p1": {
             "name": "Cocoa",
-            "quantity": 29,
+            "quantity": 18,
             "price": 150
         },
         "p2": {
             "name": "fudge",
-            "quantity": 25,
+            "quantity": 16,
             "price": 25
         },
         "p3": {
             "name": "CIL Rice",
-            "quantity": 39,
+            "quantity": 14,
             "price": 550
         },
         "p4": {
             "name": "Bread",
-            "quantity": 26,
+            "quantity": 14,
             "price": 55
         },
         "p5": {
-            "name": "Garlic",
-            "quantity": 9,
-            "price": 20
+            "name": "Onion",
+            "quantity": 14,
+            "price": 15
         }
     }
 ]
