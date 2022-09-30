@@ -45,6 +45,28 @@ def search_one_customer():
             print("ID does not exist. Please input an existing ID")
 
 
+def view_customer_purchase_history():
+    view_customer_names()
+    with open(filename, "r") as f:
+        temp = json.load(f)
+    [open_list] = temp
+    while True:
+        search_id = input("Enter Customer ID: \n")
+        if search_id in open_list:
+            for shopping_id in open_list[search_id]["Purchase History"]:
+                print(f"Shopping ID: {shopping_id}")
+                for item in open_list[search_id]["Purchase History"][shopping_id]:
+                    if item == "Total":
+                        total = open_list[search_id]["Purchase History"][shopping_id]["Total"]
+                        print(f"Total: {total} Kshs \n")
+                    else:
+                        product_name = open_list[search_id]["Purchase History"][shopping_id][item]["product name"]
+                        product_quantity = open_list[search_id]["Purchase History"][shopping_id][item]["product quantity"]
+                        product_cost = open_list[search_id]["Purchase History"][shopping_id][item]["product cost"]
+                        print(f"Name: {product_name}, Cost: {product_cost}, Quantity{product_quantity}")
+            break
+        else:
+            print("ID does not exist. Please input an existing ID")
 
 
 

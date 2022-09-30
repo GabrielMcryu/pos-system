@@ -7,6 +7,7 @@ def search_customer():
 Select Customer Search Option
 1) List one Customer
 2) List all Customers    
+3) List Customer Purchase History
     """)
 
 
@@ -40,6 +41,9 @@ def search_main():
                     break
                 elif customer_choice == "2":
                     search_all_customers()
+                    break
+                elif customer_choice == "3":
+                    view_customer_purchase_history()
                     break
                 else:
                     print("You have entered a wrong choice. Please input choices between (1-2)")

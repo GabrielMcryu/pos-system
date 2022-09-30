@@ -11,7 +11,7 @@ def check_customer_id(customer_data):
         view_customer_names()
         customer_id = input("""
 Enter Customer ID
-Press 'F' to finish
+Press 'Q' to quit
 > """).lower()
         if customer_id in customer_data or customer_id == 'q':
             return customer_id
@@ -135,7 +135,7 @@ def purchase_main():
         purchase_temp = json.load(f)
 
     customer_id = check_customer_id(open_customer)
-    if customer_id == 'f':
+    if customer_id == 'q':
         main()
     else:
         item_data = get_item_data(open_product)
