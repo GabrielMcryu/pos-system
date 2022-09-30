@@ -3,6 +3,7 @@ import json
 filename = 'storage/customers.json'
 
 
+# Deletes Customer data from file by ID
 def delete_customer():
     view_customer_names()
     with open(filename, "r") as f:

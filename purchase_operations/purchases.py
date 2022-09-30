@@ -6,6 +6,7 @@ product_file = 'storage/products.json'
 purchase_file = 'storage/purchases.json'
 
 
+# Checks if customer ID exists in json file
 def check_customer_id(customer_data):
     while True:
         view_customer_names()
@@ -19,6 +20,7 @@ Press 'Q' to quit
             print("ID does not exist. Please input an existing ID")
 
 
+# Creates new item ID
 def create_item_id(item_dict):
     if not item_dict:
         new_item_id = "item-1"
@@ -31,6 +33,7 @@ def create_item_id(item_dict):
         return new_item_id
 
 
+# Creates new Shopping ID
 def create_shopping_id():
     with open(purchase_file, "r") as f:
         temp = json.load(f)
@@ -46,6 +49,7 @@ def create_shopping_id():
         return new_id
 
 
+# Checks if product quantity is valid
 def check_product_quantity(p_id, p_data):
     while True:
         view_product_names()
@@ -65,6 +69,7 @@ Enter '0' to cancel
             return product_quantity
 
 
+# Adds item data into cart until process is finished
 def get_item_data(product_data):
     items = {}
     id_list = []
@@ -102,6 +107,7 @@ Press 'Q' to quit shopping
             print("ID does not exist. Please input an existing ID")
 
 
+# Confirms whether to go through with payment
 def confirm_payment(total):
     while True:
         confirm = input(f"""
@@ -114,6 +120,7 @@ Confirm Payment? (y/n)
             print("You have entered an invalid choice. Please input y/n")
 
 
+# Adds Purchase data into Customer purchase history
 def add_customer_purchase(c_id, s_id, items, total):
     shopping_data = {}
     with open(customer_file, "r") as f:
@@ -128,6 +135,7 @@ def add_customer_purchase(c_id, s_id, items, total):
         json.dump(temp, f, indent=4)
 
 
+# Creates new Purchase details and adds it into purchase json file
 def purchase_main():
     from main import main
     purchase_data = {}

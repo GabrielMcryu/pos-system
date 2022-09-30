@@ -3,6 +3,7 @@ import json
 filename = "storage/products.json"
 
 
+# Create new Product ID
 def create_product_id():
     open_temp = {}
     new_id = ""
@@ -20,6 +21,7 @@ def create_product_id():
         return new_id
 
 
+# Add new Product details into json file
 def add_product():
     view_product_names()
     new_id = create_product_id()

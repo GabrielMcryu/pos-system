@@ -3,6 +3,7 @@ import json
 filename = 'storage/products.json'
 
 
+# Updates Product data by ID
 def update_product():
     view_product_names()
     with open(filename, "r") as f:

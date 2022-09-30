@@ -2,6 +2,8 @@ from product_operations.add_product import add_product
 from product_operations.delete_product import delete_product
 from product_operations.update_product import update_product
 
+
+# Display Product query options to menu
 def product_queries():
     print("""
 What would you like to do?
@@ -12,6 +14,7 @@ What would you like to do?
     """)
 
 
+# Main product menu
 def product_main():
     product_queries()
     choice = input("> ").lower()

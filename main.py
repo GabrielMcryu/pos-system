@@ -4,6 +4,7 @@ from search_operations.search import search_main
 from purchase_operations.purchases import purchase_main
 
 
+# Displays Main menu choices
 def general_queries():
     print("""
 Welcome to the point of sale system!
@@ -16,6 +17,7 @@ Q) Quit
     """)
 
 
+# Main menu after starting the program
 def main():
     general_queries()
     choice = input("> ").lower()

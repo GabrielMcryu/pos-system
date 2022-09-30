@@ -3,6 +3,7 @@ import json
 filename = 'storage/customers.json'
 
 
+# Creates the Customer ID
 def create_customer_id():
     open_temp = {}
     new_id = ""
@@ -20,6 +21,7 @@ def create_customer_id():
         return new_id
 
 
+# Adds New Customer to json file
 def add_customer():
     view_customer_names()
     new_id = create_customer_id()

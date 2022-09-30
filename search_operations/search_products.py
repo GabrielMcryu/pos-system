@@ -2,6 +2,7 @@ import json
 filename = "storage/products.json"
 
 
+# List all Products and their data
 def search_all_products():
     with open(filename, "r") as f:
         temp = json.load(f)
@@ -17,6 +18,7 @@ def search_all_products():
         print('\n')
 
 
+# Lists all products and data in one line
 def view_product_names():
     with open(filename, "r") as f:
         temp = json.load(f)
@@ -28,6 +30,7 @@ def view_product_names():
         print(f"ID: {product_id}, Name: {name}, Quantity: {quantity}, Price: {price} Kshs")
 
 
+# List one product and its data
 def search_one_product():
     view_product_names()
     with open(filename, "r") as f:

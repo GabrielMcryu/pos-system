@@ -2,6 +2,7 @@ from search_operations.search_customers import *
 from search_operations.search_products import *
 
 
+# Displays Search Customer choices in menu
 def search_customer():
     print("""
 Select Customer Search Option
@@ -11,6 +12,7 @@ Select Customer Search Option
     """)
 
 
+# Displays Search Products choices in menu
 def search_product():
     print("""
 Select Product Search Option    
@@ -19,6 +21,7 @@ Select Product Search Option
     """)
 
 
+# Displays Search choices in menu
 def search_queries():
     print("""
 What would you like to do?
@@ -28,6 +31,7 @@ What would you like to do?
     """)
 
 
+# Search Menu query
 def search_main():
     search_queries()
     choice = input("> ").lower()

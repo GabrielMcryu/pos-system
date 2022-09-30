@@ -3,6 +3,7 @@ import json
 filename = 'storage/products.json'
 
 
+# Delete product data by ID
 def delete_product():
     view_product_names()
     with open(filename, "r") as f:

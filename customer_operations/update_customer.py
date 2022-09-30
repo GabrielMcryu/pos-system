@@ -3,6 +3,7 @@ import json
 filename = 'storage/customers.json'
 
 
+# Updates Customer Details by ID
 def update_customer():
     view_customer_names()
     with open(filename, "r") as f:

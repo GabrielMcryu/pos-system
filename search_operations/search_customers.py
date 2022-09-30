@@ -2,6 +2,7 @@ import json
 filename = "storage/customers.json"
 
 
+# Lists all customers and their data
 def search_all_customers():
     with open(filename, "r") as f:
         temp = json.load(f)
@@ -17,6 +18,7 @@ def search_all_customers():
         print("\n")
 
 
+# Lists all customer names
 def view_customer_names():
     with open(filename, "r") as f:
         temp = json.load(f)
@@ -26,6 +28,7 @@ def view_customer_names():
         print(f"Customer ID: {customer_id}, Customer Name: {name}")
 
 
+# Lists one customer and their data
 def search_one_customer():
     view_customer_names()
     with open(filename, "r") as f:
@@ -45,6 +48,7 @@ def search_one_customer():
             print("ID does not exist. Please input an existing ID")
 
 
+# Lists Customer purchase history by ID
 def view_customer_purchase_history():
     view_customer_names()
     with open(filename, "r") as f:
