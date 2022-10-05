@@ -173,7 +173,10 @@ def purchase_main():
             if confirmation == "y":
                 print("Payment confirmed. Thank you for shopping with us!")
                 print("Receipt:")
+                c_name = open_customer[customer_id]["name"]
+                print(f"Customer: {c_name}")
                 for item in item_data:
+
                     p_name = item_data[item]["product name"]
                     p_quantity = item_data[item]["product quantity"]
                     p_cost = item_data[item]["product cost"]
