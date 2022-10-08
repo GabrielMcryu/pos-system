@@ -1,4 +1,4 @@
-# POS SYSTEM DOCUMENTATION
+# POINT OF SALE SYSTEM
 This application is a Point of Sale system. It allows a customer to buy products from a store. The application runs in a command line interface, and has been developed using the python programming language and using json files for data storage.
 ## Features
 The application has variety of features, here a user can create, update, delete and read customer, and product details. The user can also record the products that the customer wants to buy, and prints a receipt after the customer has paid the total cost of the products.
