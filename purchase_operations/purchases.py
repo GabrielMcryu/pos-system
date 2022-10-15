@@ -1,5 +1,6 @@
 from search_operations.search_customers import view_customer_names
 from search_operations.search_products import view_product_names
+from purchase_operations.send_email import send_to_email
 import json
 customer_file = 'storage/customers.json'
 product_file = 'storage/products.json'
@@ -18,7 +19,6 @@ Press 'Q' to quit
             return customer_id
         else:
             print("ID does not exist. Please input an existing ID")
-
 
 # Creates new item ID
 def create_item_id(item_dict):
@@ -119,7 +119,6 @@ Confirm Payment? (y/n)
         else:
             print("You have entered an invalid choice. Please input y/n")
 
-
 # Adds Purchase data into Customer purchase history
 def add_customer_purchase(c_id, s_id, items, total):
     shopping_data = {}
@@ -186,6 +185,8 @@ def purchase_main():
                 for i in item_data.keys():
                     p_id = item_data[i]["product id"]
                     open_product[p_id]["quantity"] = open_product[p_id]["quantity"] - item_data[i]["product quantity"]
+
+                send_to_email(customer_id, shopping_id, item_data, total)
 
                 add_customer_purchase(customer_id, shopping_id, item_data, total)
 

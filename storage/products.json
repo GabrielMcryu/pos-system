@@ -2,17 +2,17 @@
     {
         "p1": {
             "name": "Milk",
-            "quantity": 50,
+            "quantity": 46,
             "price": 55
         },
         "p2": {
             "name": "Cocoa",
-            "quantity": 100,
+            "quantity": 91,
             "price": 150
         },
         "p3": {
             "name": "Bread",
-            "quantity": 80,
+            "quantity": 86,
             "price": 60
         },
         "p4": {
@@ -22,7 +22,7 @@
         },
         "p5": {
             "name": "Onions",
-            "quantity": 150,
+            "quantity": 143,
             "price": 25
         }
     }
