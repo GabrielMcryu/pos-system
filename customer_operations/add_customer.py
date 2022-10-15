@@ -39,6 +39,13 @@ def add_customer():
         break
     item_data["phone number"] = phone_number
     while True:
+        email = input("Enter Email Address: ")
+        if '@' in email:
+            item_data['email'] = email
+            break
+        else:
+            print('Please enter a valid email address')
+    while True:
         gender_choice = input("""
 Enter Customer gender:
 1) Male
