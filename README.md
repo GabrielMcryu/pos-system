@@ -12,12 +12,12 @@ To install this program, you first need to download the program files from the r
 ```bash
 git clone https://github.com/GabrielMcryu/pos-system
 ```
-You'll first need to access the email info file to add your email and address:
+You'll first need to access the email_info.py file to add your email address and app_password:
 ```bash
 cd pos-system/purchase_operations
 ```
 You'll need to modify the email_info.py file with a text editor. Replace the empty string of admin_email with your email and password with your app_password.\
-To get you app password, you'll need to access your Google account settings, security tab here [here](https://myaccount.google.com/security) and generate an app password. Use that app password to replace the empty string of password:
+To get your app password, you'll need to access your Google account settings, security tab [here](https://myaccount.google.com/security) and generate an app password. Use that app password to replace the empty string of password:
 ```python
 admin_email = ''
 password = ''
