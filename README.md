@@ -5,15 +5,26 @@ The application has variety of features, here a user can create, update, delete 
 ## Navigation
 When the user runs the application, he will be taken to the main menu. Here, they will be able to navigate through the program using the menu choices that have been listed in front of them until they do the task that they wish to complete
 ## Requirements
-To run this application, the user needs to have python3 installed in his system. They can download it [here](https://www.python.org/).
+To run this application, the user needs to have python3 installed in his system. They can download it [here](https://www.python.org/).\
+You will also need to have a Gmail account to send the emails to customers. You can register [here](https://www.google.com/intl/en-GB/gmail/about/)
 ## Installation Guide
 To install this program, you first need to download the program files from the repository using the command below in your command line:
 ```bash
 git clone https://github.com/GabrielMcryu/pos-system
 ```
-The next step is to enter the directory of the application:
+You'll first need to access the email info file to add your email and address:
 ```bash
-cd pos-system
+cd pos-system/purchase_operations
+```
+You'll need to modify the email_info.py file with a text editor. Replace the empty string of admin_email with your email and password with your app_password.\
+To get you app password, you'll need to access your Google account settings, security tab here [here](https://myaccount.google.com/security) and generate an app password. Use that app password to replace the empty string of password:
+```python
+admin_email = ''
+password = ''
+```
+The next step is to go back to the main directory of the application:
+```bash
+cd ..
 ```
 Finally, you can run the program using this command:
 ```python
