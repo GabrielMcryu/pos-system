@@ -16,20 +16,49 @@ def update_customer():
             name = input("Update Customer name: ")
             open_list[update_option]["name"] = name
             while True:
-                try:
-                    phone_number = int(input("Enter Phone number: "))
-                except ValueError:
-                    print("Please enter number values")
-                    continue
-                break
-            open_list[update_option]["phone number"] = phone_number
+                phone_number = 0
+                phone_string = input("Enter Phone number")
+                if 9 < len(phone_string) < 11:
+                    if phone_string[0] == '0':
+                        try:
+                            phone_number = int(phone_string)
+                        except ValueError:
+                            print("Please enter number values")
+                            continue
+                        break
+                    else:
+                        print('Invalid phone number. Enter Correct format')
+                else:
+                    print('Invalid phone number. Enter Correct format')
+            number_string = f"0{phone_number}"
+            open_list[update_option]["phone number"] = number_string
+
+            while True:
+                email = input("Enter Email Address: ")
+                find_at = email.find('@')
+                email_length = len(email)
+                after_at = email[find_at + 1:email_length]
+                if '@' not in email[0] and '.' not in email[-1]:
+                    if '@' in email:
+                        if '.' not in after_at[0]:
+                            if '.' in after_at:
+                                open_list[update_option]['email'] = email
+                                break
+                            else:
+                                print('Please enter a valid email address')
+                        else:
+                            print('Please enter a valid email address')
+                    else:
+                        print('Please enter a valid email address')
+                else:
+                    print('Please enter a valid email address')
+
             while True:
                 gender_choice = input("""
 Enter the gender:
 1) Male
 2) Female
-: 
-                    """)
+> """)
                 if gender_choice == '1':
                     open_list[update_option]["gender"] = "male"
                     break

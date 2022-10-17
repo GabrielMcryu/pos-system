@@ -6,6 +6,7 @@ import json
 customer_file = 'storage/customers.json'
 
 
+# Sends receipt to Customer Email
 def send_to_email(c_id, s_id, item_data, total):
     with open(customer_file, 'r') as f:
         temp = json.load(f)

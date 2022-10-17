@@ -2,28 +2,33 @@
     {
         "p1": {
             "name": "Milk",
-            "quantity": 46,
+            "quantity": 47,
             "price": 55
         },
         "p2": {
             "name": "Cocoa",
-            "quantity": 91,
+            "quantity": 86,
             "price": 150
         },
         "p3": {
             "name": "Bread",
-            "quantity": 86,
+            "quantity": 98,
             "price": 60
         },
         "p4": {
             "name": "Sunlight Hand Wash",
-            "quantity": 300,
+            "quantity": 292,
             "price": 200
         },
         "p5": {
             "name": "Onions",
-            "quantity": 143,
+            "quantity": 148,
             "price": 25
+        },
+        "p6": {
+            "name": "Whole chicken",
+            "quantity": 100,
+            "price": 850
         }
     }
 ]
