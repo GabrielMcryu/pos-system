@@ -1,6 +1,12 @@
 from search_operations.search_customers import view_customer_names
 import json
+import re
+
 filename = 'storage/customers.json'
+
+
+def valid_email(user_input):
+    return bool(re.match(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', user_input))
 
 
 # Updates Customer Details by ID
@@ -41,23 +47,26 @@ def update_customer():
             print(f'Email: {open_list[update_option]["email"]}')
             while True:
                 email = input("Enter Email Address: ")
-                find_at = email.find('@')
                 email_length = len(email)
-                after_at = email[find_at + 1:email_length]
-                if '@' not in email[0] and '.' not in email[-1]:
-                    if '@' in email:
-                        if '.' not in after_at[0]:
-                            if '.' in after_at:
-                                open_list[update_option]['email'] = email
-                                break
-                            else:
-                                print('Please enter a valid email address')
+                dot_position = email.find('.')
+                h_position = email.find('-')
+                at_position = email.find('@')
+                after_at = email[at_position + 1:email_length]
+
+                if ('.' not in email[dot_position + 1] and '@' not in email[dot_position + 1] and
+                        '-' not in email[dot_position + 1] and '.' not in email[h_position + 1] and
+                        '@' not in email[h_position + 1] and '-' not in email[h_position + 1]):
+                    if '.' not in after_at[0] and '-' not in after_at[0]:
+                        email_bool = valid_email(email)
+                        if email_bool:
+                            break
                         else:
-                            print('Please enter a valid email address')
+                            print('Invalid email. Please enter a valid email format')
                     else:
-                        print('Please enter a valid email address')
+                        print('Invalid email. Please enter a valid email format')
                 else:
-                    print('Please enter a valid email address')
+                    print('Invalid email. Please enter a valid email format')
+            open_list[update_option]['email'] = email
 
             while True:
                 gender_choice = input("""
