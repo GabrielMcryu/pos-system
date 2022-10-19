@@ -17,7 +17,7 @@ def delete_customer():
             delete_option = input('>')
             if delete_option in open_list:
                 del open_list[delete_option]
-                print("Customer data deleted")
+                print("Customer details deleted")
                 break
             else:
                 print("ID does not exist. Please input an existing ID")

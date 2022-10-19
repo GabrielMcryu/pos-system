@@ -13,7 +13,9 @@ def update_product():
         print("Which ID would you like to update?: ")
         update_option = input("Select an ID: ")
         if update_option in open_list:
+            print(f"Name: {open_list[update_option]['name']}")
             name = input("Update Product name: ")
+            print(f"Quantity: {open_list[update_option]['quantity']}")
             while True:
                 try:
                     quantity = int(input("Enter Quantity: "))
@@ -21,6 +23,7 @@ def update_product():
                     print("Please enter number values")
                     continue
                 break
+            print(f"Price: {open_list[update_option]['price']}")
             while True:
                 try:
                     price = int(input("Enter Price: "))

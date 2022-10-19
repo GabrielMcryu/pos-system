@@ -13,26 +13,32 @@ def update_customer():
         print("Choose Customer ID to update")
         update_option = input("Select ID: ")
         if update_option in open_list:
+            print(f"Name: {open_list[update_option]['name']}")
             name = input("Update Customer name: ")
             open_list[update_option]["name"] = name
+            print(f"Phone number: {open_list[update_option]['phone number']}")
             while True:
                 phone_number = 0
                 phone_string = input("Enter Phone number")
                 if 9 < len(phone_string) < 11:
-                    if phone_string[0] == '0':
-                        try:
-                            phone_number = int(phone_string)
-                        except ValueError:
-                            print("Please enter number values")
-                            continue
-                        break
+                    if '-' not in phone_string and '+' not in phone_string:
+                        if phone_string[0] == '0':
+                            try:
+                                phone_number = int(phone_string)
+                            except ValueError:
+                                print("Please enter number values")
+                                continue
+                            break
+                        else:
+                            print('Invalid phone number. Enter Correct format')
                     else:
-                        print('Invalid phone number. Enter Correct format')
+                        print("Please enter number values")
                 else:
                     print('Invalid phone number. Enter Correct format')
             number_string = f"0{phone_number}"
             open_list[update_option]["phone number"] = number_string
 
+            print(f'Email: {open_list[update_option]["email"]}')
             while True:
                 email = input("Enter Email Address: ")
                 find_at = email.find('@')
@@ -67,10 +73,11 @@ Enter the gender:
                     break
                 else:
                     print('Invalid Choice')
-            print("Customer data updated")
+
             break
         else:
             print("ID does not exist. Please input existing ID")
     temp = [open_list]
     with open(filename, "w") as f:
         json.dump(temp, f, indent=4)
+    print("Customer details updated")
