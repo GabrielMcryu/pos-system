@@ -53,13 +53,16 @@ def update_customer():
                 at_position = email.find('@')
                 after_at = email[at_position + 1:email_length]
 
-                if ('.' not in email[dot_position + 1] and '@' not in email[dot_position + 1] and
-                        '-' not in email[dot_position + 1] and '.' not in email[h_position + 1] and
-                        '@' not in email[h_position + 1] and '-' not in email[h_position + 1]):
-                    if '.' not in after_at[0] and '-' not in after_at[0]:
-                        email_bool = valid_email(email)
-                        if email_bool:
-                            break
+                if '.' not in email[-1] and '-' not in email[-1]:
+                    if ('.' not in email[dot_position + 1] and '@' not in email[dot_position + 1] and
+                            '-' not in email[dot_position + 1] and '.' not in email[h_position + 1] and
+                            '@' not in email[h_position + 1] and '-' not in email[h_position + 1]):
+                        if '.' not in after_at[0] and '-' not in after_at[0]:
+                            email_bool = valid_email(email)
+                            if email_bool:
+                                break
+                            else:
+                                print('Invalid email. Please enter a valid email format')
                         else:
                             print('Invalid email. Please enter a valid email format')
                     else:
