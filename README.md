@@ -10,6 +10,7 @@
 - [Python 3.10](https://www.python.org/downloads/release/python-3108/)
 - [Pycharm IDE](https://www.jetbrains.com/pycharm/)
 - [Json](https://www.json.org/json-en.html)
+- [Gmail](https://www.google.com/gmail/about/)
 ***
 ## Features
 The application has variety of features, here a user can create, update, delete and read customer, and product details. The user can also record the products that the customer wants to buy, and prints a receipt after the customer has paid the total cost of the products.
