@@ -5,8 +5,25 @@ import re
 filename = 'storage/customers.json'
 
 
+# Checks if email is valid and returns True or False
 def valid_email(user_input):
     return bool(re.match(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', user_input))
+
+
+# Checks if phone number exists
+def check_duplicate_phone_number(p_num, c_id):
+    with open(filename, "r") as f:
+        temp = json.load(f)
+    [open_list] = temp
+
+    for i in open_list:
+        if i == c_id:
+            continue
+        elif open_list[i]["phone number"] == p_num:
+            return 'y'
+        else:
+            continue
+    return
 
 
 # Updates Customer Details by ID
@@ -26,22 +43,26 @@ def update_customer():
             while True:
                 phone_number = 0
                 phone_string = input("Enter Phone number")
-                if 9 < len(phone_string) < 11:
-                    if ('-' not in phone_string and '+' not in phone_string and '*' not in phone_string
-                            and '/' not in phone_string):
-                        if phone_string[0] == '0':
-                            try:
-                                phone_number = int(phone_string)
-                            except ValueError:
-                                print("Please enter number values")
-                                continue
-                            break
-                        else:
-                            print('Invalid phone number. Enter Correct format')
-                    else:
-                        print("Please enter number values")
+                check_duplicate = check_duplicate_phone_number(phone_string, update_option)
+                if check_duplicate == 'y':
+                    print("Phone number exists. Please input a different phone number")
                 else:
-                    print('Invalid phone number. Enter Correct format')
+                    if 9 < len(phone_string) < 11:
+                        if ('-' not in phone_string and '+' not in phone_string and '*' not in phone_string
+                                and '/' not in phone_string):
+                            if phone_string[0] == '0':
+                                try:
+                                    phone_number = int(phone_string)
+                                except ValueError:
+                                    print("Please enter number values")
+                                    continue
+                                break
+                            else:
+                                print('Invalid phone number. Enter Correct format')
+                        else:
+                            print("Please enter number values")
+                    else:
+                        print('Invalid phone number. Enter Correct format')
             number_string = f"0{phone_number}"
             open_list[update_option]["phone number"] = number_string
 
