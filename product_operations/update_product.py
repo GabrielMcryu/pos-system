@@ -3,6 +3,21 @@ import json
 filename = 'storage/products.json'
 
 
+def check_duplicate_product_name(p_name, p_id):
+    with open(filename, "r") as f:
+        temp = json.load(f)
+    [open_list] = temp
+
+    for i in open_list:
+        if i == p_id:
+            continue
+        elif open_list[i]['name'] == p_name:
+            return 'y'
+        else:
+            continue
+    return
+
+
 # Updates Product data by ID
 def update_product():
     view_product_names()
@@ -14,7 +29,13 @@ def update_product():
         update_option = input("Select an ID: ")
         if update_option in open_list:
             print(f"Name: {open_list[update_option]['name']}")
-            name = input("Update Product name: ")
+            while True:
+                name = input("Update Product name: ")
+                check_name = check_duplicate_product_name(name, update_option)
+                if check_name == 'y':
+                    print('Product name already exists. Please enter a different Product name')
+                else:
+                    break
             print(f"Quantity: {open_list[update_option]['quantity']}")
             while True:
                 try:

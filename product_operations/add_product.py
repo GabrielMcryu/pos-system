@@ -21,6 +21,19 @@ def create_product_id():
         return new_id
 
 
+def check_duplicate_product_name(p_name):
+    with open(filename, "r") as f:
+        temp = json.load(f)
+    [open_list] = temp
+
+    for i in open_list:
+        if open_list[i]['name'] == p_name:
+            return 'y'
+        else:
+            continue
+    return
+
+
 # Add new Product details into json file
 def add_product():
     view_product_names()
@@ -29,7 +42,14 @@ def add_product():
     item_data = {}
     with open(filename, "r") as f:
         temp = json.load(f)
-    item_data["name"] = input("Enter Product name: ")
+    while True:
+        name = input("Enter Product name: ")
+        check_name = check_duplicate_product_name(name)
+        if check_name == 'y':
+            print('Product name already exists. Please enter a different product name')
+        else:
+            item_data["name"] = name
+            break
     while True:
         try:
             quantity = int(input("Enter Quantity: "))
