@@ -27,7 +27,8 @@ def update_customer():
                 phone_number = 0
                 phone_string = input("Enter Phone number")
                 if 9 < len(phone_string) < 11:
-                    if '-' not in phone_string and '+' not in phone_string:
+                    if ('-' not in phone_string and '+' not in phone_string and '*' not in phone_string
+                            and '/' not in phone_string):
                         if phone_string[0] == '0':
                             try:
                                 phone_number = int(phone_string)
