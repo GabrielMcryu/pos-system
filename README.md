@@ -1,12 +1,26 @@
 # POINT OF SALE SYSTEM
-This application is a Point of Sale system. It allows a customer to buy products from a store. The application runs in a command line interface, and has been developed using the python programming language and using json files for data storage.
+## TABLE OF CONTENTS
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Navigation](#navigation)
+- [Requirements](#requirements)
+- [Installation Guide](#installation-guide)
+***
+## Technologies Used
+- [Python 3.10](https://www.python.org/downloads/release/python-3108/)
+- [Pycharm IDE](https://www.jetbrains.com/pycharm/)
+- [Json](https://www.json.org/json-en.html)
+***
 ## Features
 The application has variety of features, here a user can create, update, delete and read customer, and product details. The user can also record the products that the customer wants to buy, and prints a receipt after the customer has paid the total cost of the products.
+***
 ## Navigation
 When the user runs the application, he will be taken to the main menu. Here, they will be able to navigate through the program using the menu choices that have been listed in front of them until they do the task that they wish to complete
+***
 ## Requirements
-To run this application, the user needs to have python3 installed in his system. They can download it [here](https://www.python.org/).\
+To run this application, the user needs to have python3 installed in their system. They can download it [here](https://www.python.org/).\
 You will also need to have a Gmail account to send the emails to customers. You can register [here](https://www.google.com/intl/en-GB/gmail/about/)
+***
 ## Installation Guide
 To install this program, you first need to download the program files from the repository using the command below in your command line:
 ```bash
@@ -30,3 +44,4 @@ Finally, you can run the program using this command:
 ```python
 python3 main.py
 ```
+
